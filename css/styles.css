@@ -1,0 +1,493 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Typography
+# Navigation
+# Content
+  ## Profile
+  ## Portfolio
+  ## Skills
+  ## Contact
+  ## Footer
+# Media Queries
+
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+body {
+  color: #4a4a4a;
+  background-color: #FAFAFA;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3333;
+}
+
+main {
+  max-width: 1024px;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif; 
+}
+
+ul, a{
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+p {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+.top {
+  font-size: 0;
+  margin: 0;
+}
+.main-header {
+  background-color: #FAFAFA;
+  max-width: 1024px;
+  margin: auto;
+}
+
+/* ---- Navigation bar ---- */
+#main-nav {
+  margin-top: 25px; 
+  margin-bottom: 40px; 
+}
+
+.student-name {
+  text-align: center;
+  font-size: 24px; 
+  margin-bottom: 30px;  
+}
+
+/* ---- Navigation elements ---- */
+nav li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a4a4a;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  margin: 0 15px 5px 15px;
+  padding: 1em 1.2em;
+}
+
+nav li a:hover {
+  background-color: #FDFDFD;
+  color: orange;
+}
+
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/* ---- Intro block ---- */
+#intro {
+  padding: 30px 0;
+  display: inline-block;
+  clear: both;
+}
+
+#intro p {
+  color: #7f7f7f;
+  padding: 30px 1em; 
+}
+
+.profile-image img {
+  display: block;
+  margin:auto;
+  width: 70%;
+  transition: transform .2s; /* Animation */
+}
+
+.profile-image img:hover {
+  transform: perspective(500px) rotateY(-15deg);
+}
+
+
+/* ---- Portfolio block ---- */
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+}
+
+.portfolio-hl { 
+  flex: 0 0 100%; /* fg: 0, fs: 0, fb: 100% */
+  justify-content: center;
+}
+
+.portfolio-hl h1 {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  padding: 60px 0;
+}
+
+.portfolio-teaser {
+  padding: 0 16px;
+}
+
+.portfolio-teaser img {
+  max-width: 320px;
+  display: block;
+  margin:auto;
+  width: 100%;
+}
+
+.portfolio-teaser-hl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #4a4a4a;
+  padding: 28px 0 0 0;
+}
+
+.portfolio-teaser p {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 100;
+  padding: 15px 20px 40px 20px;
+  margin: 0;
+}
+
+/* ---- Skills block ---- */
+#skills {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background:linear-gradient(to bottom, white 40%, #FAFAFA);
+  margin: 0;
+  padding: 0 0 40px 0;
+}
+
+.skills-hl { 
+  flex: 0 0 100%; /* fg: 0, fs: 0, fb: 100% */
+  justify-content: center;
+}
+
+.skills-hl h1 {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 60px 0 30px;
+}
+
+.skills-item p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.skills-gfont {
+  font-family: 'Lora', 'Times New Roman', Times, serif;
+  color: #29bce4;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.skills-item {
+  padding: 0 40px 10px 55px;
+  margin: 0;
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.skills-item::before {
+  content:'';
+  height: 18px;
+  width: 18px;
+  background-repeat: no-repeat;
+  background: url('../images/check_small.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 20px;
+  top: 6px;
+}
+
+/* ---- Contact block ---- */
+#contact {
+  text-align: center;
+  padding: 0;
+  clear: both; 
+}
+
+#contact h1 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  padding: 60px 0 30px 0;
+}
+
+.contact-text p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+  color: #4a4a4a;
+  margin-bottom: 60px;
+  padding: 0 1em;
+}
+
+.contact-phone p,
+.contact-email p {
+  font-size: 20px;
+  font-weight: 100;
+  color: #7f7f7f;
+}
+
+.contact-phone a,
+.contact-email a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #7f7f7f;
+  padding-left: 10px;
+}
+
+.contact-email {
+  margin-bottom: 90px;
+}
+
+/* ---- Footer block ---- */
+footer {
+  padding: 0 16px;
+}
+
+.line{
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 30px;
+}
+
+.student-name-footer {
+  float: left;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-bottom: 30px;
+}
+
+.back-to-top {
+  float:right;
+}
+
+.back-to-top a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a4a4a;
+  text-transform: uppercase;
+}
+
+.back-to-top a:hover {
+  color: orange;
+}
+
+.footer-nav {
+  visibility: hidden;
+  margin-right: 0px;
+  float: right;  
+}
+
+.footer-nav li {
+  float:left;
+}
+
+.footer-nav li a {
+  margin: 0 0 0 30px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.footer-nav li a:hover {
+  color: orange;
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 768px) {
+  main {
+    padding: 0 60px;
+  }
+
+/* ---- Header ---- */
+  #main-nav {
+    margin: 60px 30px;
+    align-content: center; 
+  }
+
+  .student-name{
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav li a {
+    background: none;
+    margin: 20px 20px;
+    padding: 1em 0 0 0;
+  }
+  nav li a:hover {
+    background-color: #FAFAFA;
+  }
+  
+
+/* ---- Intro block ---- */
+  #intro {
+    padding: 30px 30px 60px 30px;
+  }
+  
+  #intro p {
+    text-align: left;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 0;
+  }
+
+  .profile-image {
+    float: right;
+    padding-left: 30px;
+  }
+
+  .profile-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 367px;
+  }
+
+/* ---- Portfolio block ---- */
+  #portfolio {
+    flex-wrap: wrap;
+    margin: 0;
+    background-color: white;
+    clear: both;
+  }
+ 
+  .portfolio-teaser {
+    max-width: 300px;
+    padding: 0 16px;
+    display: block;
+    float: left;
+  }
+  
+  .portfolio-teaser img {
+    max-width: 320px;
+    display: block;
+    margin:auto;
+    width: 100%;
+  }
+
+  .portfolio-teaser p {
+    padding: 15px 0 60px 0;
+  }
+
+  .back-to-top {
+    display: none;
+  }
+
+  .footer-nav {
+    visibility: visible;
+  }
+
+/* ---- Contact block ---- */
+  #contact .contact-text p {
+    padding: 0 22%;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+/* ---- Header ---- */
+  .main-header {
+    padding: 0 60px;
+  }
+
+  .student-name{
+    float: left;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  nav {
+    margin-right: 0px;
+    float: right;  
+  }
+
+  nav li {
+    float:left;
+  }
+
+  nav li a {
+    background: none;
+    margin: 0 0 0 40px;
+    padding: 1em 0 0 0;
+  }
+
+/* ---- Portfolio block ---- */
+
+  .profile-image {
+    float: right;
+    padding-left: 30px;
+  }
+
+  .profile-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+/* ---- Footer block ---- */
+  footer {
+    margin: auto;
+    max-width: 966px;
+  }
+
+}
+ 
+
+
